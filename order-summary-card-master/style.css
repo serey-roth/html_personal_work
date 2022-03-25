@@ -1,0 +1,138 @@
+@import url(https://fonts.google.com/specimen/Red+Hat+Display:wght@500;700;900&display=swap);
+
+:root {
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+    --White: hsl(100, 100%, 100%);
+    --ActiveBlue: rgb(0, 153, 255);
+}
+
+body {
+    width: auto;
+    height: auto;
+    background: url(/images/pattern-background-desktop.svg) no-repeat 0 0;
+    background-color: var(--PaleBlue);
+    background-size: cover;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: var(--White);
+    border-radius: 32px;
+    width: 375px;
+    overflow: hidden;
+    margin: 24px;
+}
+
+.card-content {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 24px;
+}
+
+.card-content h1 {
+    color: var(--DarkBlue);
+    margin-top: 32px;
+}
+
+p {
+    color: var(--DesaturatedBlue);
+    line-height: 1.5;
+
+}
+
+.pricing-plan {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VeryPaleBlue);
+    border-radius: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pricing-plan img {
+    margin: 0;
+    padding-right: 5px;
+}
+
+.price {
+    flex-grow: 2;
+    text-align: left;
+}
+
+.price h4, p {
+    padding: 0;
+    margin: 5px;
+}
+
+.pricing-plan a {
+    color: var(--BrightBlue);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+button {
+    background-color: var(--BrightBlue);
+    color: var(--PaleBlue);
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#cancel {
+    margin: 0px;
+    color: var(--DesaturatedBlue);
+    font-size: 16px;
+    font-weight: 900;
+}
+
+button:hover {
+    background-color: var(--ActiveBlue)
+}
+
+#cancel:hover{
+    color: var(--DarkBlue);
+}
+
+.pricing a:hover{
+    color: var(--ActiveBlue);
+}
+
+@media only screen and (min-width: 1441px){
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }

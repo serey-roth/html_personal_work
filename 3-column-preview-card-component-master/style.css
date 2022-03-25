@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+
+:root {
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+    --VeryLightGray: hsl(0, 0%, 95%);
+    --FontSize: 15px;
+}
+
+body {
+    width: auto;
+    height: auto;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: var(--FontSize);
+    font-weight: 400;
+    color: var(--VeryLightGray);
+    text-align: left;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    color: var(--TransparentWhite);
+    line-height: 2;
+}
+
+.card-wrapper {
+    margin: 24px;
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.card-content h1 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+}
+
+button {
+    margin: 0;
+    padding: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 25px;
+}
+
+#sedan {
+    background-color: var(--BrightOrange);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+#sedan button {
+    color: var(--BrightOrange);
+}
+
+#suvs {
+    background-color: var(--DarkCyan);
+}
+
+#suvs button {
+    color: var(--DarkCyan);
+}
+
+#luxury {
+    background-color: var(--VeryDarkCyan);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+#luxury button {
+    color: var(--VeryDarkCyan);
+}
+
+#sedan button:hover {
+    color: var(--VeryLightGray);
+    background-color: var(--BrightOrange);
+}
+
+#suvs button:hover {
+    color: var(--VeryLightGray);
+    background-color: var(--DarkCyan);
+}
+
+#luxury button:hover {
+    color: var(--VeryLightGray);
+    background-color: var(--VeryDarkCyan);
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .main-card {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #sedan {
+        border-bottom-left-radius: 24px;
+        border-top-right-radius: 0;
+    }
+
+    #luxury {
+        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 24px;
+    }
+}
+
+.attribution { color: black; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
